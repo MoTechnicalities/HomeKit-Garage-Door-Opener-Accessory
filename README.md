@@ -1,5 +1,5 @@
 # HomeKit Garage Door Opener Accessory
-## [A+] Apple Home DIY Project Using HomeSpan with ESP32 
+## [A+] Apple Home DIY Project Using HomeSpan with ESP32 Microcontrollers
 This program implements a HomeKit-compatible garage door opener accessory for use with ESP32 microcontrollers. It provides smart home control integration for garage doors, enhancing home automation and security capabilities.
 
 ## Features
