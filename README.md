@@ -26,6 +26,39 @@ This accessory allows users to control and monitor their garage door remotely th
 4. Automated state transitions
 5. Timeout-based stopped state detection
 
+## HomeKit States and Apple Home App Display
+
+This accessory manages five distinct garage door states as per the HomeKit specification:
+
+1. Open (0)
+2. Closed (1)
+3. Opening (2)
+4. Closing (3)
+5. Stopped (4)
+
+However, it's important to note that the Apple Home app simplifies the display of these states for the end-user:
+
+- **Open** and **Closed** states are displayed as is.
+- **Opening** and **Closing** are shown as transitional states, often with an animation.
+- The **Stopped** state is not explicitly displayed in the Apple Home app. When the door is in a Stopped state:
+  - The app may show the last known definitive state (Open or Closed).
+  - It might display the target state instead.
+  - In some cases, it may show an intermediate position without a specific label.
+
+For more detailed state information, users may need to use third-party HomeKit apps that can display all five states explicitly.
+
+### State Transitions
+
+Our accessory handles state transitions as follows:
+
+- *Current: 0 (Open)*, *Target: 0 (Open)*: Door is fully open.
+- *Current: 1 (Closed)*, *Target: 1 (Closed)*: Door is fully closed.
+- *Current: 2 (Opening)*, *Target: 0 (Open)*: Door is in the process of opening.
+- *Current: 3 (Closing)*, *Target: 1 (Closed)*: Door is in the process of closing.
+- *Current: 4 (Stopped)*, *Target: any state*: Door has stopped in an intermediate position.
+
+The accessory will report these states accurately to HomeKit, ensuring that even if the Apple Home app doesn't explicitly show the "Stopped" state, the system is aware of the door's actual condition.
+
 ## Hardware Requirements
 
 - ESP32 microcontroller
