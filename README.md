@@ -24,26 +24,37 @@ This accessory allows users to control and monitor their garage door remotely th
 2. Real-time status updates
 3. Obstruction detection and reporting
 4. Automated state transitions
+5. Timeout-based stopped state detection
 
 ## Hardware Requirements
 
 - ESP32 microcontroller
 - Garage door mechanism
-- Open and closed position sensors
-- (Optional) Obstruction detection sensor
+- Open and closed position sensors (connected to pins 27 and 26 respectively)
+- Obstruction detection sensor (connected to pin 23)
+- Relay for door activation (connected to pin 25)
 
 ## Software Dependencies
 
-- HomeKit SDK for ESP32
-- ESP-IDF (Espressif IoT Development Framework)
+- Arduino IDE
+- ESP32 board support for Arduino
+- HomeSpan library (https://github.com/HomeSpan/HomeSpan)
 
 ## Setup and Configuration
 
-(Add instructions for setting up the hardware and software here)
+1. Install the Arduino IDE and ESP32 board support.
+2. Install the HomeSpan library in your Arduino IDE.
+3. Connect the hardware components as per the pin definitions in the code.
+4. Upload the code to your ESP32 board.
+5. Follow HomeSpan's instructions for pairing the device with your HomeKit setup.
 
 ## Usage
 
-(Provide information on how to use the accessory with HomeKit)
+Once set up and paired with HomeKit:
+
+1. Use the Home app or Siri to open, close, or check the status of your garage door.
+2. The accessory will automatically detect the door's position and any obstructions.
+3. If the door doesn't fully open or close within 14 seconds, it will enter a "Stopped" state.
 
 ## Contributing
 
