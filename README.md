@@ -59,7 +59,7 @@ Contributions to improve the accessory are welcome. There are several ways you c
 
 If you find this project useful and would like to support its development and maintenance:
 
-- Financial contributions can be made through PayPal: [Your PayPal.Me link or email]
+- Financial contributions can be made through PayPal: https://www.paypal.com/donate/?hosted_button_id=WZCVFQZKTBPEA
 - These contributions help cover hosting costs, hardware for testing, and time invested in ongoing development.
 
 Please note that financial contributions are entirely voluntary and do not entitle contributors to any special rights or privileges within the project.
