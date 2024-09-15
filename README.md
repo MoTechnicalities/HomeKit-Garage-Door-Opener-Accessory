@@ -1,5 +1,5 @@
 # HomeKit Garage Door Opener Accessory
-
+## [A+] Apple Home DIY Project Using HomeSpan with ESP32 
 This program implements a HomeKit-compatible garage door opener accessory for use with ESP32 microcontrollers. It provides smart home control integration for garage doors, enhancing home automation and security capabilities.
 
 ## Features
@@ -115,6 +115,16 @@ Please note that financial contributions are entirely voluntary and do not entit
 - Help answer questions from other users in the project's issues section.
 
 Thank you for your interest in contributing to the HomeKit Garage Door Opener Accessory project!
+
+## Additional Resources
+
+For those interested in learning more about Apple Home and home automation, check out this book by the author:
+
+[![APPLE HOME: The Future of Education through Automation](https://m.media-amazon.com/images/I/71moUK1EZFL._SL200_.jpg)](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
+
+["APPLE HOME: The Future of Education through Automation" by Mogir Jason Rofick](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
+
+This book provides insights into the world of Apple Home and how it's shaping the future of home automation and education.
 
 ## License
 
