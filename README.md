@@ -88,13 +88,13 @@ Thank you for your interest in contributing to the HomeKit Garage Door Opener Ac
 
 ## Additional Resources
 
-For those interested in learning more about Apple Home and home automation, check out this book by the author:
+For those interested in learning more about Apple Home and home automation, check out my booklet:
 
-[![APPLE HOME: The Future of Education through Automation](https://m.media-amazon.com/images/I/71moUK1EZFL._SL200_.jpg)](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
+[![[A+]APPLE HOME: A Future Proof Smart Home Education](https://m.media-amazon.com/images/I/71moUK1EZFL._SL200_.jpg)](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
 
-["[A+] APPLE HOME: The Future of Education through Automation" by Mogir Jason Rofick](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
+["[A+] APPLE HOME: A Future Proof Smart Home Education" by Mogir Jason Rofick](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
 
-This book provides insights into the world of Apple Home and how it's shaping the future of home automation and education.
+This book provides an educational insights into the world of Apple Home automation and how to prepare for the future of home automation.
 
 ## License
 
