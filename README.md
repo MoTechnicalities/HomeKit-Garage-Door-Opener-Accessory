@@ -1,63 +1,33 @@
 # HomeKit Garage Door Opener Accessory
-## [A+] Apple Home DIY Project Using HomeSpan with ESP32 Microcontrollers
+**An [A+] Apple Home DIY Arduino Sketch Using HomeSpan on ESP32 Microcontrollers**
+
 This program implements a HomeKit-compatible garage door opener accessory for use with ESP32 microcontrollers. It provides smart home control integration for garage doors, enhancing home automation and security capabilities.
 
 ## Features
+- **HomeKit Integration**: Control your garage door via the Apple Home ecosystem (apps or Siri).
+- **Door State Monitoring**: Detects five distinct garage door states using two door sensors for greater position accuracy (Open, Closed, Opening, Closing, Stopped).
+- **Obstruction Detection**: Ensures safety by identifying obstacles and preventing automated activations if there is an obstruction.
+- **Smart Automation**: Automates state transitions based on sensor readings.
+- **Relay Control**: Manages door activation with a connected relay.
+  
+*Off the shelf units like Meross only use one sensor to detect only when the door is closed. They also lack Obstruction detection.
 
-- **HomeKit Integration**: Seamlessly connects with Apple HomeKit for smart home control.
-- **Multiple Door States**: Manages and reports five distinct garage door states:
-  - Open
-  - Closed
-  - Opening
-  - Closing
-  - Stopped
-- **Remote Control**: Handles door activation requests from HomeKit.
-- **Position Monitoring**: Uses open and closed sensors to monitor door position accurately.
-- **Safety Features**: Detects and reports obstructions for enhanced safety.
-- **Smart State Management**: Implements state transitions based on sensor readings and timing.
+## App Display and State Transitions
 
-## Functionality
+### App Display
 
-This accessory allows users to control and monitor their garage door remotely through the Apple Home app or Siri. Key functionalities include:
+The accessory program reports five states to HomeKit: Open, Closed, Opening, Closing, and Stopped. The Apple Home App will display Open and Closed as the primary states, while Opening and Closing show as animations.
 
-1. Remote door operation (open/close)
-2. Real-time status updates
-3. Obstruction detection and reporting
-4. Automated state transitions
-5. Timeout-based stopped state detection
-
-## HomeKit States and Apple Home App Display
-
-This accessory manages five distinct garage door states as per the HomeKit specification:
-
-1. Open (0)
-2. Closed (1)
-3. Opening (2)
-4. Closing (3)
-5. Stopped (4)
-
-However, it's important to note that the Apple Home app simplifies the display of these states for the end-user:
-
-- **Open** and **Closed** states are displayed as is.
-- **Opening** and **Closing** are shown as transitional states, often with an animation.
-- The **Stopped** state is not explicitly displayed in the Apple Home app. When the door is in a Stopped state:
-  - The app may show the last known definitive state (Open or Closed).
-  - It might display the target state instead.
-  - In some cases, it may show an intermediate position without a specific label.
-
-For more detailed state information, users may need to use third-party HomeKit apps that can display all five states explicitly.
+*Note that the Apple Home App lacks the ability to properly display the Stopped state. However the accessory continues to monitor the door's real-time status and passes the correct state to HomeKit. Therefore, third party apps may display the Stopped state.
 
 ### State Transitions
-
-Our accessory handles state transitions as follows:
-
-- *Current: 0 (Open)*, *Target: 0 (Open)*: Door is fully open.
-- *Current: 1 (Closed)*, *Target: 1 (Closed)*: Door is fully closed.
-- *Current: 2 (Opening)*, *Target: 0 (Open)*: Door is in the process of opening.
-- *Current: 3 (Closing)*, *Target: 1 (Closed)*: Door is in the process of closing.
-- *Current: 4 (Stopped)*, *Target: any state*: Door has stopped in an intermediate position.
-
-The accessory will report these states accurately to HomeKit, ensuring that even if the Apple Home app doesn't explicitly show the "Stopped" state, the system is aware of the door's actual condition.
+| **Current State** | **Target State** | **Description**                  |
+|------------------|------------------|----------------------------------|
+| 0 (Open)         | 0 (Open)         | Door is fully open               |
+| 1 (Closed)       | 1 (Closed)       | Door is fully closed             |
+| 2 (Opening)      | 0 (Open)         | Door is in the process of opening|
+| 3 (Closing)      | 1 (Closed)       | Door is in the process of closing|
+| 4 (Stopped)      | Any state        | Door has stopped in transition   |
 
 ## Hardware Requirements
 
@@ -122,7 +92,7 @@ For those interested in learning more about Apple Home and home automation, chec
 
 [![APPLE HOME: The Future of Education through Automation](https://m.media-amazon.com/images/I/71moUK1EZFL._SL200_.jpg)](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
 
-["APPLE HOME: The Future of Education through Automation" by Mogir Jason Rofick](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
+["[A+] APPLE HOME: The Future of Education through Automation" by Mogir Jason Rofick](https://www.amazon.com/APPLE-HOME-Future-Education-Automation-ebook/dp/B0DF6ZYPQ1/ref=sr_1_1?keywords=Apple+Home&qid=1726433220&refinements=p_27%3AMogir&s=books&sr=1-1)
 
 This book provides insights into the world of Apple Home and how it's shaping the future of home automation and education.
 
